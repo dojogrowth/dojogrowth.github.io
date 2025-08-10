@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Growth - Partner buat Bisnis Kamu</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #d1d5db; /* Light gray text */
+            background-color: #000000; /* Black background to match logo */
+        }
+        .text-primary-red {
+            color: #d4222f; /* Deep red from logo */
+        }
+        .bg-primary-red {
+            background-color: #d4222f;
+        }
+        .border-primary-red {
+            border-color: #d4222f;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #d4222f, #d1d5db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a1a1a, #000000);
+        }
+        .card-bg {
+            background-color: #1a1a1a;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+        .whatsapp-button {
+            transition: all 0.3s ease;
+        }
+        .whatsapp-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(212, 34, 47, 0.4);
+        }
+        .whatsapp-icon {
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+        }
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background: radial-gradient(circle at top left, #1a1a1a 0%, transparent 50%), radial-gradient(circle at bottom right, #1a1a1a 0%, transparent 50%), #000000;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            border-color: #d4222f;
+        }
+    </style>
+</head>
+<body class="scroll-smooth">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-black bg-opacity-90 backdrop-blur-md shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="flex items-center space-x-2">
+                <img src="http://googleusercontent.com/file_content/1" onerror="this.onerror=null;this.src='https://placehold.co/150x50/000/fff?text=DojoGrowth'" alt="Dojo Growth Logo" class="h-10">
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold">
+                <a href="#services" class="hover:text-primary-red transition-colors">Layanan</a>
+                <a href="#testimonials" class="hover:text-primary-red transition-colors">Testimoni</a>
+                <a href="#about" class="hover:text-primary-red transition-colors">Tentang Kami</a>
+                <a href="#contact" class="hover:text-primary-red transition-colors">Kontak</a>
+            </div>
+            <a href="#contact" class="hidden md:inline-flex items-center px-4 py-2 border border-primary-red rounded-full text-white bg-transparent hover:bg-primary-red transition-all duration-300 shadow-md">
+                Hubungi Kami
+            </a>
+            <button id="mobile-menu-toggle" class="md:hidden text-gray-300 hover:text-primary-red focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black px-6 py-4">
+            <div class="flex flex-col space-y-4 text-sm">
+                <a href="#services" class="hover:text-primary-red transition-colors">Layanan</a>
+                <a href="#testimonials" class="hover:text-primary-red transition-colors">Testimoni</a>
+                <a href="#about" class="hover:text-primary-red transition-colors">Tentang Kami</a>
+                <a href="#contact" class="hover:text-primary-red transition-colors">Kontak</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg py-24 md:py-32 text-center text-white relative">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tighter mb-4">
+                Yuk, Tumbuhin <span class="gradient-text">Bisnis Kamu</span> Bareng Kita!
+            </h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-400">
+                Dojo Growth siap jadi partner terpercaya kamu buat semua kebutuhan digital. Dari bikin website keren sampai ngelola media sosial, kita bantu bisnis kecil di Indonesia makin maju.
+            </p>
+            <a href="https://wa.me/6281234567890?text=Halo%20Dojo%20Growth%2C%20saya%20tertarik%20dengan%20layanan%20Anda!" target="_blank" class="whatsapp-button inline-flex items-center px-8 py-4 text-lg font-bold rounded-full bg-primary-red text-white transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <svg class="h-6 w-6 mr-3 whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12.039 2c-5.467 0-9.914 4.457-9.914 9.916 0 1.942.56 3.864 1.637 5.567l-1.077 3.931 4.02-1.054c1.644.975 3.527 1.542 5.334 1.542 5.467 0 9.914-4.456 9.914-9.914s-4.446-9.916-9.914-9.916zm3.501 13.916s-.19.245-.55.245c-.35 0-1.258-.521-3.633-1.632-2.375-1.11-3.235-2.618-3.235-3.864s.541-1.464 1.092-1.921c.551-.458 1.258-.52 1.488-.52.23 0 .46.01.69.52.23.51.988 2.375 1.092 2.593.103.218.19.245.39.245.19 0 1.272-.46 2.404-.981 1.132-.521 1.839-.838 2.158-.981.319-.143.551-.214.69-.071s.928.537.928.981c0 .445-.487 1.205-.838 1.663-.351.458-.809.52-1.009.52-.2 0-.319-.072-.519-.143l-.119-.06z" /></svg>
+                Chat via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 md:py-28 gradient-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">Layanan Kami yang Bikin Kamu Makin Jago</h2>
+            <p class="text-center text-lg max-w-3xl mx-auto mb-16 text-gray-400">
+                Kami punya banyak layanan keren buat bantu bisnismu. Dari bikin konten sampai naikin penjualan, semua ada di sini!
+            </p>
+
+            <!-- Service Card: Social Media Management -->
+            <div class="card-bg rounded-2xl p-8 mb-10 card-shadow transition-all duration-300 card-hover border border-transparent">
+                <div class="flex items-center mb-6">
+                    <div class="bg-primary-red p-3 rounded-full mr-4">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.5 6a7.5 7.5 0 11-1.25-.099M16.5 6a7.5 7.5 0 11-1.25-.099M10.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM10.5 17.25a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zM16.5 17.25a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" /></svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white">Manajemen Media Sosial</h3>
+                </div>
+                <p class="text-gray-400 mb-8">Nggak cuma posting biasa, kami bantu kamu bikin konten yang menarik dan ngatur media sosial biar brand kamu makin dikenal banyak orang.</p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Basic Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Basic</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Cocok buat kamu yang baru mulai.</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 500K - 1M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Rencana Konten Bulanan</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>15 Postingan/Bulan</span>
+                            </li>
+                            <li class="flex items-start text-gray-500">
+                                <svg class="h-4 w-4 text-gray-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                <span>Analisis Mingguan</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Basic%20Manajemen%20Media%20Sosial!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                    <!-- Hero Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Hero</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Buat yang mau lebih serius.</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 1M - 5M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Semua di Paket Basic</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>30 Postingan/Bulan</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Analisis Mingguan & Report Bulanan</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Hero%20Manajemen%20Media%20Sosial!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                    <!-- Super Hero Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Super Hero</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Pengen viral? Ini paketnya!</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 5M - 10M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Semua di Paket Hero</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Konten Tanpa Batas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Strategi Digital Komprehensif</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Pemasaran Influencer Mikro</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Super%20Hero%20Manajemen%20Media%20Sosial!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service Card: Professional Website -->
+            <div class="card-bg rounded-2xl p-8 mb-10 card-shadow transition-all duration-300 card-hover border border-transparent">
+                <div class="flex items-center mb-6">
+                    <div class="bg-primary-red p-3 rounded-full mr-4">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17.25v1.007a3 3 0 01-.879 2.122A2.999 2.999 0 015.626 21H5a2.25 2.25 0 01-2.25-2.25V15M9 17.25h.008M9 17.25H12m-3 0V7.5M12 17.25h.008M12 15.75H18a2.25 2.25 0 002.25-2.25V12M12 15.75h-.008" /></svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white">Bikin Website Profesional</h3>
+                </div>
+                <p class="text-gray-400 mb-8">Punya website yang keren itu wajib. Kami bantu kamu bikin website yang tampilannya ciamik, gampang dipakai, dan pastinya bikin brand kamu makin profesional.</p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Basic Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Basic</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Buat yang butuh website simpel tapi modern.</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 500K - 1M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Website 1 Halaman</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Desain Responsif (Mobile Friendly)</span>
+                            </li>
+                            <li class="flex items-start text-gray-500">
+                                <svg class="h-4 w-4 text-gray-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                <span>Integrasi Chatbot & Formulir Kontak</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Basic%20Pembuatan%20Website!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                    <!-- Hero Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Hero</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Website multi-halaman yang profesional.</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 1M - 5M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Website hingga 5 Halaman</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Optimasi SEO Dasar</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Hosting & Domain Gratis (1 Tahun)</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Hero%20Pembuatan%20Website!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                    <!-- Super Hero Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Super Hero</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Website full-power buat bisnis besar!</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 5M - 10M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Website E-commerce Kustom</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Integrasi Payment Gateway</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Sistem Manajemen Konten (CMS)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Dukungan Teknis Prioritas</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Super%20Hero%20Pembuatan%20Website!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card: Mobile & Web Apps -->
+            <div class="card-bg rounded-2xl p-8 mb-10 card-shadow transition-all duration-300 card-hover border border-transparent">
+                <div class="flex items-center mb-6">
+                    <div class="bg-primary-red p-3 rounded-full mr-4">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25h-2.25m-6 0a3 3 0 00-3 3v15a3 3 0 003 3h7.5a3 3 0 003-3v-15a3 3 0 00-3-3h-7.5zm.75 1.5h6.75m-6.75 3h6.75m-6.75 3h6.75m-6.75 3h6.75m-6.75 3h6.75m-6.75 3h6.75" /></svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white">Aplikasi Mobile & Web</h3>
+                </div>
+                <p class="text-gray-400 mb-8">Bikin aplikasi yang sesuai banget sama kebutuhan bisnismu. Kami bantu bikin aplikasi yang gampang dipakai di HP atau komputer mana pun.</p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Basic Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Basic</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Aplikasi fungsional sederhana.</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 500K - 1M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Aplikasi Web 1 Fitur</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>UI/UX Sederhana</span>
+                            </li>
+                            <li class="flex items-start text-gray-500">
+                                <svg class="h-4 w-4 text-gray-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                <span>Pengujian Dasar</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Basic%20Aplikasi%20Mobile%20&%20Web!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                    <!-- Hero Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Hero</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Aplikasi dengan beberapa fitur utama.</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 1M - 5M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Semua di Paket Basic</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Pengembangan Aplikasi Mobile (iOS/Android)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Database & API Dasar</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Hero%20Aplikasi%20Mobile%20&%20Web!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                    <!-- Super Hero Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Super Hero</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Solusi aplikasi terpadu yang lengkap!</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 5M - 10M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Semua di Paket Hero</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Pengembangan Aplikasi iOS & Android Native</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Integrasi Fitur Kompleks (API Pihak Ketiga)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Maintenance & Dukungan Lanjutan</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Super%20Hero%20Aplikasi%20Mobile%20&%20Web!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card: System Information Web Based -->
+            <div class="card-bg rounded-2xl p-8 mb-10 card-shadow transition-all duration-300 card-hover border border-transparent">
+                <div class="flex items-center mb-6">
+                    <div class="bg-primary-red p-3 rounded-full mr-4">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17.25v1.007a3 3 0 01-.879 2.122A2.999 2.999 0 015.626 21H5a2.25 2.25 0 01-2.25-2.25V15M9 17.25h.008M9 17.25H12m-3 0V7.5M12 17.25h.008M12 15.75H18a2.25 2.25 0 002.25-2.25V12M12 15.75h-.008" /></svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white">Sistem Informasi Berbasis Web</h3>
+                </div>
+                <p class="text-gray-400 mb-8">Nggak mau lagi ribet ngurus data dan operasional? Kami bisa bikinin sistem informasi khusus buat bisnismu biar semua lebih rapi dan gampang dikontrol.</p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Basic Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Basic</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Sistem manajemen data sederhana.</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 500K - 1M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Manajemen Data Dasar</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Laporan Sederhana</span>
+                            </li>
+                            <li class="flex items-start text-gray-500">
+                                <svg class="h-4 w-4 text-gray-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                <span>Integrasi Kustom</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Basic%20Sistem%20Informasi%20Berbasis%20Web!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                    <!-- Hero Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Hero</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Solusi untuk manajemen operasional.</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 1M - 5M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Semua di Paket Basic</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Manajemen Stok & Inventaris</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Integrasi Dasar ke Sistem Lain</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Hero%20Sistem%20Informasi%20Berbasis%20Web!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                    <!-- Super Hero Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Super Hero</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Sistem custom yang terintegrasi penuh.</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 5M - 10M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Semua di Paket Hero</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Pengembangan Modul Kustom (misal: HRD, Keuangan)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Integrasi Multi-platform & API</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Dukungan Teknis Penuh</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Super%20Hero%20Sistem%20Informasi%20Berbasis%20Web!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card: Professional Ads -->
+            <div class="card-bg rounded-2xl p-8 mb-10 card-shadow transition-all duration-300 card-hover border border-transparent">
+                <div class="flex items-center mb-6">
+                    <div class="bg-primary-red p-3 rounded-full mr-4">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18v-3.375a3.75 3.75 0 011.25-2.625h1.25a3.75 3.75 0 011.25 2.625V18M12 18V8a3 3 0 013-3h.75a3 3 0 013 3v10M8 18V6a3 3 0 013-3h.75a3 3 0 013 3v12" /></svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white">Iklan Profesional</h3>
+                </div>
+                <p class="text-gray-400 mb-8">Mau produk kamu dilihat banyak orang? Kami bisa bantu bikin kampanye iklan yang terarah, biar kamu dapat banyak pelanggan baru!</p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Basic Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Basic</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Pemasaran digital awal.</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 500K - 1M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Pemasangan Iklan Dasar</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Targeting Audiens Sederhana</span>
+                            </li>
+                            <li class="flex items-start text-gray-500">
+                                <svg class="h-4 w-4 text-gray-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                <span>Laporan Mingguan</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Basic%20Iklan%20Profesional!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                    <!-- Hero Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Hero</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Strategi iklan yang lebih terperinci.</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 1M - 5M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Semua di Paket Basic</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Strategi Kampanye Iklan Lanjutan</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>A/B Testing Iklan</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Hero%20Iklan%20Profesional!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                    <!-- Super Hero Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Super Hero</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Full-service iklan dari awal sampai akhir.</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 5M - 10M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Semua di Paket Hero</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Manajemen Iklan Multi-platform (Google Ads, Meta Ads)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Pembuatan Materi Iklan Profesional</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Laporan Kinerja Bulanan & Analisis</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Super%20Hero%20Iklan%20Profesional!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Service Card: Marketplace Selling -->
+            <div class="card-bg rounded-2xl p-8 mb-10 card-shadow transition-all duration-300 card-hover border border-transparent">
+                <div class="flex items-center mb-6">
+                    <div class="bg-primary-red p-3 rounded-full mr-4">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17.25v1.007a3 3 0 01-.879 2.122A2.999 2.999 0 015.626 21H5a2.25 2.25 0 01-2.25-2.25V15M9 17.25h.008M9 17.25H12m-3 0V7.5M12 17.25h.008M12 15.75H18a2.25 2.25 0 002.25-2.25V12M12 15.75h-.008" /></svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white">Naikin Penjualan di Marketplace</h3>
+                </div>
+                <p class="text-gray-400 mb-8">Jualan di marketplace tapi sepi? Kami punya trik dan strategi jitu biar produk kamu makin kelihatan dan penjualan jadi naik pesat di marketplace favorit di Indonesia!</p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Basic Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Basic</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Optimasi toko sederhana.</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 500K - 1M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Analisis Produk & Kompetitor</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Optimasi Judul & Deskripsi Produk</span>
+                            </li>
+                            <li class="flex items-start text-gray-500">
+                                <svg class="h-4 w-4 text-gray-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                <span>Manajemen Promo & Diskon</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Basic%20Pemasaran%20di%20Marketplace!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                    <!-- Hero Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Hero</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Strategi lengkap untuk naik level.</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 1M - 5M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Semua di Paket Basic</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Analisis Pasar & Tren</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Manajemen Iklan Berbayar Marketplace</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Hero%20Pemasaran%20di%20Marketplace!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                    <!-- Super Hero Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Super Hero</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Solusi total buat jadi top seller.</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 5M - 10M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Semua di Paket Hero</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Manajemen Toko End-to-End</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Laporan Kinerja & Rekomendasi Bulanan</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Strategi Pemasaran Influencer Mikro</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Super%20Hero%20Pemasaran%20di%20Marketplace!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card: Micro Influencer Provider -->
+            <div class="card-bg rounded-2xl p-8 mb-10 card-shadow transition-all duration-300 card-hover border border-transparent">
+                <div class="flex items-center mb-6">
+                    <div class="bg-primary-red p-3 rounded-full mr-4">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25h-2.25m-6 0a3 3 0 00-3 3v15a3 3 0 003 3h7.5a3 3 0 003-3v-15a3 3 0 00-3-3h-7.5zm.75 1.5h6.75m-6.75 3h6.75m-6.75 3h6.75m-6.75 3h6.75m-6.75 3h6.75m-6.75 3h6.75" /></svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white">Penyedia Mikro-Influencer</h3>
+                </div>
+                <p class="text-gray-400 mb-8">Punya produk bagus tapi bingung cara promosiinnya? Kami hubungkan kamu dengan mikro-influencer yang pas, biar produkmu sampai ke target audiens yang tepat dan pesanmu jadi makin kuat.</p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Basic Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Basic</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Kerja sama dengan influencer pemula.</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 500K - 1M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Pencarian 1 Mikro-Influencer</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Manajemen Kontak Dasar</span>
+                            </li>
+                            <li class="flex items-start text-gray-500">
+                                <svg class="h-4 w-4 text-gray-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                <span>Analisis Hasil Sederhana</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Basic%20Penyedia%20Mikro-Influencer!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                    <!-- Hero Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Hero</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Paket kolaborasi dengan lebih banyak influencer.</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 1M - 5M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Semua di Paket Basic</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Pencarian hingga 5 Mikro-Influencer</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Manajemen Kampanye End-to-End</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Hero%20Penyedia%20Mikro-Influencer!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                    <!-- Super Hero Package -->
+                    <div class="bg-[#242424] p-6 rounded-xl flex flex-col items-center text-center">
+                        <h4 class="text-xl font-bold mb-2 gradient-text">Super Hero</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Kerja sama jangka panjang untuk brand ambassador.</p>
+                        <p class="text-2xl font-extrabold text-white mb-4">Rp 5M - 10M</p>
+                        <ul class="text-sm text-gray-300 space-y-2 text-left w-full mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Semua di Paket Hero</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Kolaborasi Jangka Panjang</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Pemantauan & Analisis Kinerja Mendalam</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-4 w-4 text-green-400 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Brand Ambassador Management</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20paket%20Super%20Hero%20Penyedia%20Mikro-Influencer!" target="_blank" class="whatsapp-button inline-flex items-center px-4 py-2 text-sm font-bold rounded-full bg-primary-red text-white">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 md:py-28">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">Apa Kata Mereka tentang Kami?</h2>
+            <p class="text-center text-lg max-w-3xl mx-auto mb-16 text-gray-400">
+                Kepuasan pelanggan adalah prioritas kami. Ini dia beberapa testimoni dari mereka yang sudah bekerja sama dengan Dojo Growth.
+            </p>
+            <div class="grid md:grid-cols-2 gap-10">
+
+                <!-- Testimonial Card 1 -->
+                <div class="card-bg rounded-2xl p-8 card-shadow transition-all duration-300 card-hover border border-transparent">
+                    <div class="flex items-center mb-6">
+                        <img src="https://placehold.co/60x60/d4222f/fff?text=TE" alt="Trixy Event Design Profile" class="rounded-full mr-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Trixy Event Design</h4>
+                            <div class="flex items-center mt-1">
+                                <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.381-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.381-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.381-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.381-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.381-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed italic">
+                        "Desain website dari Dojo Growth benar-benar memuaskan! Timnya sangat responsif dan hasilnya melebihi ekspektasi kami. Website kami sekarang terlihat jauh lebih profesional dan elegan. Terima kasih banyak!"
+                    </p>
+                </div>
+
+                <!-- Testimonial Card 2 -->
+                <div class="card-bg rounded-2xl p-8 card-shadow transition-all duration-300 card-hover border border-transparent">
+                    <div class="flex items-center mb-6">
+                        <img src="https://placehold.co/60x60/d4222f/fff?text=YA" alt="Yayasan Cahaya Al-Ma'un Indonesia Profile" class="rounded-full mr-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Yayasan Cahaya Al-Ma'un Indonesia</h4>
+                            <div class="flex items-center mt-1">
+                                <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.381-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.381-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.381-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.381-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.381-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed italic">
+                        "Sistem informasi web yang dibuat Dojo Growth sangat membantu kami mengelola data yayasan. Prosesnya jadi lebih terstruktur dan efisien. Kami sangat puas dan pasti akan kembali untuk layanan manajemen media sosial!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 md:py-28">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">Tentang Dojo Growth</h2>
+            <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                Di Dojo Growth, kami percaya banget kalau setiap bisnis, sekecil apa pun, punya potensi buat jadi besar. Tim kami siap bantu kamu dengan solusi digital yang profesional, berkualitas, dan pastinya nggak bikin kantong bolong. Kami bakal kerja bareng kamu, dengerin semua ide dan tujuanmu, terus bikin strategi yang pas banget biar bisnis kamu nggak cuma tumbuh, tapi bisa melesat jauh di dunia digital.
+            </p>
+            <p class="text-lg text-gray-300 leading-relaxed">
+                Misi kami itu simpel: jadi partner andalan buat semua pebisnis yang mau berkembang, berinovasi, dan terhubung lebih dekat dengan pelanggan mereka.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 md:py-28 gradient-bg text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">Siap untuk Bertumbuh Bersama?</h2>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-400">
+                Langsung aja chat kita buat ngobrolin gimana kami bisa bantu bisnis kamu sukses. Kami tunggu, ya!
+            </p>
+            <a href="https://wa.me/6281234567890?text=Halo%20Dojo%20Growth%2C%20saya%20tertarik%20dengan%20layanan%20Anda!" target="_blank" class="whatsapp-button inline-flex items-center px-8 py-4 text-lg font-bold rounded-full bg-primary-red text-white transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <svg class="h-6 w-6 mr-3 whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12.039 2c-5.467 0-9.914 4.457-9.914 9.916 0 1.942.56 3.864 1.637 5.567l-1.077 3.931 4.02-1.054c1.644.975 3.527 1.542 5.334 1.542 5.467 0 9.914-4.456 9.914-9.914s-4.446-9.916-9.914-9.916zm3.501 13.916s-.19.245-.55.245c-.35 0-1.258-.521-3.633-1.632-2.375-1.11-3.235-2.618-3.235-3.864s.541-1.464 1.092-1.921c.551-.458 1.258-.52 1.488-.52.23 0 .46.01.69.52.23.51.988 2.375 1.092 2.593.103.218.19.245.39.245.19 0 1.272-.46 2.404-.981 1.132-.521 1.839-.838 2.158-.981.319-.143.551-.214.69-.071s.928.537.928.981c0 .445-.487 1.205-.838 1.663-.351.458-.809.52-1.009.52-.2 0-.319-.072-.519-.143l-.119-.06z" /></svg>
+                Hubungi Kami via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-black border-t border-gray-700">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-4">
+                <a href="#home" class="flex items-center justify-center space-x-2">
+                    <img src="http://googleusercontent.com/file_content/1" onerror="this.onerror=null;this.src='https://placehold.co/150x50/000/fff?text=DojoGrowth'" alt="Dojo Growth Logo" class="h-12">
+                </a>
+            </div>
+            <p class="text-gray-400 text-sm mb-6">Partner Kamu untuk solusi digital profesional.</p>
+            <div class="flex justify-center space-x-6 text-gray-400">
+                <!-- Instagram Icon -->
+                <a href="https://www.instagram.com/dojogrowth/" target="_blank" class="hover:text-primary-red transition-colors">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07c3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.148 3.228-1.667 4.772-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.251-.148-4.77-1.691-4.919-4.919-.058-1.265-.07-1.644-.07-4.85s.012-3.584.07-4.85c.149-3.227 1.668-4.772 4.919-4.919 1.266-.058 1.644-.07 4.85-.07zm0-2.163c-3.465 0-3.896.015-5.283.076-3.791.173-6.425 2.709-6.601 6.601-.061 1.387-.076 1.818-.076 5.283s.015 3.896.076 5.283c.176 3.891 2.81 6.525 6.601 6.601 1.387.061 1.818.076 5.283.076s3.896-.015 5.283-.076c3.791-.176 6.425-2.709 6.601-6.601.061-1.387.076-1.818.076-5.283s-.015-3.896-.076-5.283c-.176-3.891-2.81-6.525-6.601-6.601-1.387-.061-1.818-.076-5.283-.076zm0 4.319c-4.484 0-8.137 3.653-8.137 8.137s3.653 8.137 8.137 8.137 8.137-3.653 8.137-8.137-3.653-8.137-8.137-8.137zm0 2.215c3.266 0 5.922 2.656 5.922 5.922s-2.656 5.922-5.922 5.922-5.922-2.656-5.922-5.922 2.656-5.922 5.922-5.922zm6.273-1.637a1.458 1.458 0 00-1.458-1.458 1.458 1.458 0 00-1.458 1.458 1.458 1.458 0 001.458 1.458 1.458 1.458 0 001.458-1.458z"/></svg>
+                </a>
+                <!-- TikTok Icon -->
+                <a href="https://www.tiktok.com/@dojo.growth" target="_blank" class="hover:text-primary-red transition-colors">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M16.51 8.82a.997.997 0 01.12.87.998.998 0 01-.62.59c-.4.18-1.61.55-2.73 1.13a.998.998 0 00-.88.66.997.997 0 00.23 1.11c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.22c.11-.02.2-.02.26.02a.996.996 0 01.37.22c.21.21.36.29.56.29.21 0 .42-.1.52-.22a.996.996 0 01.37-.2
