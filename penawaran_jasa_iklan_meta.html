@@ -99,35 +99,37 @@
         <section id="fitur-paket" class="my-12">
              <h2 class="text-3xl font-bold text-center mb-8 text-gray-900">Perbandingan Fitur Lengkap</h2>
              <div class="overflow-x-auto bg-white rounded-lg shadow-lg p-4">
-                 <table class="w-full min-w-[800px] text-center">
+                 <table class="w-full min-w-[600px] text-center">
                      <thead class="border-b-2 border-[#E53E3E]">
                          <tr>
                              <th class="py-4 px-2 font-bold text-left text-lg text-gray-900">Fitur Layanan</th>
                              <th class="py-4 px-2 font-bold text-lg text-gray-900">Starter</th>
                              <th class="py-4 px-2 font-bold text-lg text-gray-900">Pertumbuhan</th>
                              <th class="py-4 px-2 font-bold text-lg text-gray-900">Bisnis</th>
-                             <th class="py-4 px-2 font-bold text-lg text-gray-900">Profesional</th>
                          </tr>
                      </thead>
                      <tbody>
+                         <tr class="border-b border-gray-300 bg-gray-100">
+                             <td class="py-4 px-2 text-left font-semibold">Biaya Jasa/Bulan</td>
+                             <td class="font-bold text-lg text-[#E53E3E]">Rp 500.000</td>
+                             <td class="font-bold text-lg text-[#E53E3E]">Rp 1.500.000</td>
+                             <td class="font-bold text-lg text-[#E53E3E]">Rp 3.000.000</td>
+                         </tr>
                          <tr class="border-b border-gray-200">
                              <td class="py-4 px-2 text-left font-semibold">Jumlah Kampanye</td>
                              <td>1 Kampanye Utama</td>
                              <td>Hingga 3 Kampanye</td>
                              <td>Hingga 5 Kampanye</td>
-                             <td>Tidak Terbatas</td>
                          </tr>
                          <tr class="border-b border-gray-200 bg-red-50">
                              <td class="py-4 px-2 text-left font-semibold">Riset & Targeting</td>
                              <td>Standar</td>
                              <td>Lanjutan</td>
                              <td>Lanjutan + Retargeting</td>
-                             <td>Menyeluruh (Full Funnel)</td>
                          </tr>
                          <tr class="border-b border-gray-200">
                              <td class="py-4 px-2 text-left font-semibold">A/B Testing Iklan</td>
                              <td>-</td>
-                             <td class="text-green-600 font-bold">✓</td>
                              <td class="text-green-600 font-bold">✓</td>
                              <td class="text-green-600 font-bold">✓</td>
                          </tr>
@@ -136,21 +138,18 @@
                               <td>-</td>
                               <td>-</td>
                              <td class="text-green-600 font-bold">✓</td>
-                             <td class="text-green-600 font-bold">✓</td>
                          </tr>
                          <tr class="border-b border-gray-200">
                              <td class="py-4 px-2 text-left font-semibold">Laporan Performa</td>
                              <td>Laporan Mingguan</td>
                              <td>Mingguan + Analisis</td>
                              <td>Mingguan Detail</td>
-                             <td>Laporan & Konsultasi</td>
                          </tr>
                          <tr class="bg-red-50">
                              <td class="py-4 px-2 text-left font-semibold">Konsultasi Strategi</td>
                              <td>Email/Chat</td>
                              <td>Email/Chat</td>
                              <td>1x Sesi Online/Bulan</td>
-                             <td>2x Sesi Online/Bulan</td>
                          </tr>
                      </tbody>
                  </table>
@@ -270,18 +269,18 @@
         };
 
         const packageData = {
-            labels: ['Starter', 'Pertumbuhan', 'Bisnis', 'Profesional'],
+            labels: ['Starter', 'Pertumbuhan', 'Bisnis'],
             datasets: [
                 {
                     label: 'Biaya Jasa (Rp)',
-                    data: [500000, 1500000, 3000000, 5000000],
+                    data: [500000, 1500000, 3000000],
                     backgroundColor: '#2D3748', // gray-800
                     borderColor: '#2D3748',
                     borderWidth: 1
                 },
                 {
                     label: 'Rekomendasi Budget Iklan Min. (Rp)',
-                    data: [500000, 1500000, 5000000, 15000000],
+                    data: [500000, 1500000, 5000000],
                     backgroundColor: '#E53E3E', // red-600
                     borderColor: '#E53E3E',
                     borderWidth: 1
