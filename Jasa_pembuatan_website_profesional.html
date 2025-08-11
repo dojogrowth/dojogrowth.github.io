@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta Description untuk SEO -->
+    <meta name="description" content="Jasa pembuatan website profesional oleh DojoGrowth. Dapatkan desain eksklusif, performa cepat, dan SEO-friendly. Paket fleksibel sudah termasuk domain & hosting.">
+    
+    <!-- Favicon dari Logo -->
+    <link rel="icon" type="image/png" href="https://i.ibb.co/6rTjMhY/Dojo-Growth-Favicon.png">
+
+    <title>Jasa Pembuatan Website Profesional | DojoGrowth</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030712; /* gray-950 */
+        }
+        
+        /* Warna utama disesuaikan dengan logo (merah) */
+        .brand-primary { color: #DC2626; } /* red-600 */
+        .bg-brand-primary { background-color: #DC2626; }
+        .border-brand-primary { border-color: #DC2626; }
+        .hover\:bg-brand-dark:hover { background-color: #B91C1C; } /* red-700 */
+        .ring-brand-primary { ring-color: #DC2626; }
+
+        /* Latar belakang dengan pola grid halus */
+        .hero-bg {
+            background-color: #111827; /* gray-900 */
+            background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .package-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            border: 1px solid #374151; /* gray-700 */
+        }
+        .package-card:hover {
+            transform: translateY(-8px);
+            border-color: #DC2626;
+        }
+
+        /* Efek glow untuk elemen penting */
+        .popular-glow {
+            box-shadow: 0 0 15px rgba(220, 38, 38, 0.4), 0 0 30px rgba(220, 38, 38, 0.3);
+        }
+        .package-card.popular-glow:hover {
+             box-shadow: 0 0 25px rgba(220, 38, 38, 0.6), 0 0 45px rgba(220, 38, 38, 0.4);
+        }
+
+        /* Animasi scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="text-gray-300">
+
+    <!-- Header -->
+    <header class="bg-black/30 backdrop-blur-lg border-b border-gray-800 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-black text-white flex items-center gap-3">
+                <img src="https://i.ibb.co/6rTjMhY/Dojo-Growth-Favicon.png" alt="Logo DojoGrowth" class="h-8 w-8">
+                DojoGrowth
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-400">
+                <a href="#fitur" class="hover:text-white transition-colors">Fitur</a>
+                <a href="#harga" class="hover:text-white transition-colors">Harga</a>
+                <a href="#kontak" class="hover:text-white transition-colors">Kontak</a>
+            </nav>
+            <a href="#kontak" class="bg-brand-primary text-white font-bold px-5 py-2.5 rounded-lg hover:bg-brand-dark transition-colors text-sm">
+                Mulai Proyek
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg relative overflow-hidden py-24 md:py-32 text-center">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-950"></div>
+        <div class="container mx-auto px-6 relative">
+            <h1 class="text-4xl md:text-6xl font-black text-white mb-5 reveal">Bangun Aset Digital Anda Bersama Kami</h1>
+            <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8 reveal" style="transition-delay: 150ms;">Kami menciptakan website profesional yang tidak hanya terlihat bagus, tapi juga memberikan hasil nyata bagi bisnis Anda.</p>
+            <div class="reveal" style="transition-delay: 300ms;">
+                <a href="#harga" class="bg-brand-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-brand-dark transition-colors text-lg">
+                    Lihat Paket Harga
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fitur Section -->
+    <section id="fitur" class="py-20 md:py-28 bg-gray-950">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white reveal">Mengapa Memilih DojoGrowth?</h2>
+                <p class="text-gray-400 mt-3 reveal" style="transition-delay: 150ms;">Kami fokus pada pilar utama yang membuat sebuah website berhasil.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Fitur 1 -->
+                <div class="bg-gray-900 p-8 rounded-xl border border-gray-800 reveal">
+                    <div class="bg-brand-primary/10 text-brand-primary text-2xl w-12 h-12 flex items-center justify-center rounded-lg mb-4">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Desain Eksklusif</h3>
+                    <p class="text-gray-400">Setiap website kami rancang unik, disesuaikan dengan identitas brand dan target audiens Anda. Tidak ada template, semua dibuat dari nol.</p>
+                </div>
+                <!-- Fitur 2 -->
+                <div class="bg-gray-900 p-8 rounded-xl border border-gray-800 reveal" style="transition-delay: 200ms;">
+                    <div class="bg-brand-primary/10 text-brand-primary text-2xl w-12 h-12 flex items-center justify-center rounded-lg mb-4">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Performa Cepat</h3>
+                    <p class="text-gray-400">Kecepatan adalah kunci. Kami mengoptimalkan setiap aspek teknis agar website Anda dapat diakses dengan cepat di semua perangkat.</p>
+                </div>
+                <!-- Fitur 3 -->
+                <div class="bg-gray-900 p-8 rounded-xl border border-gray-800 reveal" style="transition-delay: 400ms;">
+                    <div class="bg-brand-primary/10 text-brand-primary text-2xl w-12 h-12 flex items-center justify-center rounded-lg mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Siap untuk SEO</h3>
+                    <p class="text-gray-400">Kami membangun website dengan fondasi SEO yang kuat, membantu Anda lebih mudah ditemukan di mesin pencari seperti Google.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="harga" class="py-20 md:py-28 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white reveal">Investasi yang Tepat untuk Bisnis Anda</h2>
+                <p class="text-gray-400 mt-3 reveal" style="transition-delay: 150ms;">Paket transparan tanpa biaya tersembunyi.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
+                <!-- Paket Starter -->
+                <div class="package-card bg-gray-900 rounded-xl p-8 flex flex-col reveal">
+                    <h3 class="text-2xl font-bold text-white mb-2">Starter</h3>
+                    <p class="font-semibold brand-primary text-xl mb-4">Rp 2jt - 3jt</p>
+                    <p class="text-gray-400 mb-6 flex-grow">Ideal untuk profil perusahaan, portofolio, atau landing page.</p>
+                    <ul class="space-y-4 text-gray-300 mb-8">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Desain Profesional & Modern</span></li>
+                        <li class="flex items-start font-bold"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Unlimited Pembuatan Halaman</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Mobile & Tablet Friendly</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Basic SEO Setup</span></li>
+                    </ul>
+                    <div class="mt-auto pt-6 border-t border-gray-700">
+                        <p class="font-bold text-center text-green-400"><i class="fas fa-gift mr-2"></i>FREE Domain & Hosting 1 Tahun</p>
+                    </div>
+                </div>
+
+                <!-- Paket Business (Paling Populer) -->
+                <div class="package-card bg-gray-900 rounded-xl p-8 flex flex-col ring-2 ring-brand-primary popular-glow transform md:scale-105 reveal" style="transition-delay: 150ms;">
+                    <span class="bg-brand-primary text-white text-xs font-bold px-3 py-1 rounded-full self-start mb-4">Paling Populer</span>
+                    <h3 class="text-2xl font-bold text-white mb-2">Business</h3>
+                    <p class="font-semibold text-red-400 text-xl mb-4">Rp 4jt - 6jt</p>
+                    <p class="text-gray-400 mb-6 flex-grow">Untuk toko online, sistem informasi, atau website dengan banyak halaman.</p>
+                    <ul class="space-y-4 text-gray-300 mb-8">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Semua di paket Starter</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Fitur E-Commerce Dasar</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Admin Panel (CMS)</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Pelatihan Penggunaan</span></li>
+                    </ul>
+                     <div class="mt-auto pt-6 border-t border-gray-700">
+                        <p class="font-bold text-center text-green-400"><i class="fas fa-gift mr-2"></i>FREE Domain & Hosting 1 Tahun</p>
+                    </div>
+                </div>
+
+                <!-- Paket Premium -->
+                <div class="package-card bg-gray-900 rounded-xl p-8 flex flex-col reveal" style="transition-delay: 300ms;">
+                    <h3 class="text-2xl font-bold text-white mb-2">Premium</h3>
+                    <p class="font-semibold brand-primary text-xl mb-4">Rp 7jt - 10jt</p>
+                    <p class="text-gray-400 mb-6 flex-grow">Untuk portal berita, marketplace, atau aplikasi web dengan fitur kompleks.</p>
+                    <ul class="space-y-4 text-gray-300 mb-8">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Semua di paket Business</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Fitur Lanjutan (Booking, dll)</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Advanced SEO & Performance</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Support Prioritas</span></li>
+                    </ul>
+                     <div class="mt-auto pt-6 border-t border-gray-700">
+                        <p class="font-bold text-center text-green-400"><i class="fas fa-gift mr-2"></i>FREE Domain & Hosting 1 Tahun</p>
+                    </div>
+                </div>
+
+                <!-- Paket Custom -->
+                <div class="package-card bg-gray-900 rounded-xl p-8 flex flex-col reveal" style="transition-delay: 450ms;">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-2">Custom</h3>
+                    <p class="font-semibold text-gray-300 text-xl mb-4">Hubungi Kami</p>
+                    <p class="text-gray-400 mb-6 flex-grow">Punya ide besar? Mari diskusikan solusi yang dibuat khusus untuk Anda.</p>
+                    <ul class="space-y-4 text-gray-300 mb-8">
+                        <li class="flex items-start"><i class="fas fa-star text-yellow-400 mr-3 mt-1"></i><span>Fitur Sesuai Permintaan</span></li>
+                        <li class="flex items-start"><i class="fas fa-star text-yellow-400 mr-3 mt-1"></i><span>Integrasi API Pihak Ketiga</span></li>
+                        <li class="flex items-start"><i class="fas fa-star text-yellow-400 mr-3 mt-1"></i><span>Desain & Fungsionalitas Unik</span></li>
+                        <li class="flex items-start"><i class="fas fa-star text-yellow-400 mr-3 mt-1"></i><span>Skalabilitas Tinggi</span></li>
+                    </ul>
+                    <div class="mt-auto pt-6 border-t border-gray-700">
+                        <p class="font-bold text-center text-yellow-400"><i class="fas fa-gift mr-2"></i>FREE Domain & Hosting 1 Tahun</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="py-24 md:py-32">
+        <div class="container mx-auto px-6">
+            <div class="bg-gray-900 border border-brand-primary/30 rounded-2xl max-w-4xl mx-auto p-8 md:p-12 text-center reveal popular-glow">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Siap Mengubah Ide Menjadi Kenyataan?</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto mb-10">Kami siap membantu Anda di setiap langkah. Hubungi kami untuk konsultasi gratis dan mari kita mulai membangun sesuatu yang luar biasa bersama.</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                    <a href="https://wa.me/6282298546131" target="_blank" class="w-full sm:w-auto bg-transparent border-2 border-green-500 text-green-400 font-bold py-3 px-8 rounded-lg flex items-center justify-center hover:bg-green-500 hover:text-white transition-all transform hover:scale-105 text-lg">
+                        <i class="fab fa-whatsapp mr-3 text-xl"></i>
+                        <span>Hubungi via WhatsApp</span>
+                    </a>
+                    <a href="mailto:dojogrowth@gmail.com" class="w-full sm:w-auto bg-transparent border-2 border-brand-primary text-brand-primary font-bold py-3 px-8 rounded-lg flex items-center justify-center hover:bg-brand-primary hover:text-white transition-all transform hover:scale-105 text-lg">
+                        <i class="fas fa-envelope mr-3 text-xl"></i>
+                        <span>Kirim Email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 border-t border-gray-800 text-gray-500 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <a href="#" class="text-xl font-bold text-white flex items-center justify-center gap-3 mb-4">
+                <img src="https://i.ibb.co/6rTjMhY/Dojo-Growth-Favicon.png" alt="Logo DojoGrowth" class="h-7 w-7">
+                DojoGrowth
+            </a>
+            <p>&copy; 2024 DojoGrowth. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script untuk animasi saat scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        const revealElements = document.querySelectorAll('.reveal');
+        revealElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
