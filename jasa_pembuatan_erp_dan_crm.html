@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Growth - Solusi Sistem Informasi Profesional</title>
+    <meta name="description" content="Dojo Growth menyediakan solusi sistem informasi profesional (HRIS, CRM, ERP, WMS, HMS) melalui paket pembelian dan sewa bulanan untuk mendorong pertumbuhan bisnis Anda.">
+    
+    <!-- Favicon from Logo -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%23B91C1C'/><text y='.9em' x='.05em' font-size='90' font-family='sans-serif' fill='%23FFFFFF'>DG</text></svg>">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* gray-900 */
+            color: #F3F4F6; /* gray-100 */
+        }
+        .hero-bg {
+            background-color: #111827;
+            background-image: radial-gradient(#374151 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .glass-card {
+            background: rgba(31, 41, 55, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(55, 65, 81, 0.3);
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #DC2626; /* red-600 */
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        #mobile-menu-button .gg-menu,
+        #mobile-menu-button .gg-close {
+            display: none;
+        }
+        #mobile-menu-button.open .gg-close {
+            display: block;
+        }
+        #mobile-menu-button:not(.open) .gg-menu {
+            display: block;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navbar -->
+    <header id="header" class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto max-w-7xl px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-red-700 rounded-md flex items-center justify-center text-white font-bold text-lg">DG</div>
+                <span class="text-xl font-bold text-white">Dojo Growth</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#layanan" class="nav-link text-gray-300 hover:text-white">Layanan</a>
+                <a href="#harga" class="nav-link text-gray-300 hover:text-white">Paket Harga</a>
+                <a href="#mengapa-kami" class="nav-link text-gray-300 hover:text-white">Mengapa Kami</a>
+            </div>
+            <a href="#kontak" class="hidden md:inline-block bg-red-700 text-white font-semibold py-2 px-5 rounded-lg hover:bg-red-800 transition-colors">
+                Hubungi Kami
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-white z-50">
+                <svg class="gg-menu h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg class="gg-close hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-0 left-0 w-full bg-gray-900 px-6 pb-4 pt-20 space-y-2">
+            <a href="#layanan" class="mobile-nav-link block text-gray-300 hover:text-white py-2">Layanan</a>
+            <a href="#harga" class="mobile-nav-link block text-gray-300 hover:text-white py-2">Paket Harga</a>
+            <a href="#mengapa-kami" class="mobile-nav-link block text-gray-300 hover:text-white py-2">Mengapa Kami</a>
+            <a href="#kontak" class="mobile-nav-link block bg-red-700 text-white font-semibold py-2 px-5 rounded-lg hover:bg-red-800 transition-colors mt-2">Hubungi Kami</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg text-center py-20 md:py-32">
+            <div class="container mx-auto max-w-4xl px-6">
+                <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-6">
+                    Solusi Digital Inovatif untuk <span class="text-red-600">Pertumbuhan Bisnis</span> Anda
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10">
+                    Kami merancang sistem informasi canggih yang terintegrasi untuk mengoptimalkan operasi, meningkatkan efisiensi, dan mengakselerasi kesuksesan perusahaan Anda.
+                </p>
+                <a href="#layanan" class="bg-red-700 text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-red-800 transition-transform hover:scale-105 inline-block">
+                    Jelajahi Solusi Kami
+                </a>
+            </div>
+        </section>
+
+        <!-- Layanan Section -->
+        <section id="layanan" class="py-20 fade-in-section">
+            <div class="container mx-auto max-w-7xl px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Sistem yang Kami Tawarkan</h2>
+                    <p class="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">Solusi komprehensif yang dirancang untuk menjawab setiap tantangan bisnis modern.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="glass-card p-8 rounded-xl hover:border-red-600 transition-all duration-300 transform hover:-translate-y-2">
+                        <h3 class="text-2xl font-bold text-white mb-3">HRIS</h3>
+                        <p class="text-gray-300">Kelola siklus SDM secara terpusat, mulai dari rekrutmen, absensi, payroll, hingga evaluasi kinerja.</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-xl hover:border-red-600 transition-all duration-300 transform hover:-translate-y-2">
+                        <h3 class="text-2xl font-bold text-white mb-3">CRM</h3>
+                        <p class="text-gray-300">Bangun loyalitas pelanggan dan tingkatkan penjualan dengan manajemen data dan interaksi yang efektif.</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-xl hover:border-red-600 transition-all duration-300 transform hover:-translate-y-2">
+                        <h3 class="text-2xl font-bold text-white mb-3">WMS</h3>
+                        <p class="text-gray-300">Optimalkan operasional gudang dengan monitoring stok real-time dan manajemen alur barang yang efisien.</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-xl hover:border-red-600 transition-all duration-300 transform hover:-translate-y-2">
+                        <h3 class="text-2xl font-bold text-white mb-3">HMS</h3>
+                        <p class="text-gray-300">Solusi digital terpadu untuk klinik atau rumah sakit, dari rekam medis hingga manajemen apotek.</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-xl hover:border-red-600 transition-all duration-300 transform hover:-translate-y-2">
+                        <h3 class="text-2xl font-bold text-white mb-3">ERP</h3>
+                        <p class="text-gray-300">Integrasikan seluruh proses bisnis dalam satu platform terpusat untuk kontrol dan visibilitas penuh.</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-xl hover:border-red-600 transition-all duration-300 transform hover:-translate-y-2">
+                        <h3 class="text-2xl font-bold text-white mb-3">Solusi Custom</h3>
+                        <p class="text-gray-300">Kami siap membangun sistem dari awal yang dirancang spesifik untuk alur bisnis unik Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Harga Section -->
+        <section id="harga" class="py-20 bg-gray-800/50 fade-in-section">
+            <div class="container mx-auto max-w-7xl px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Investasi Fleksibel untuk Setiap Skala Bisnis</h2>
+                    <p class="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">Pilih model investasi yang paling sesuai dengan strategi dan anggaran perusahaan Anda, baik beli putus maupun sewa bulanan.</p>
+                </div>
+
+                <!-- Opsi Beli Putus (REVISED LAYOUT) -->
+                <div class="mb-20">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white text-center mb-4">Paket Beli Putus (Kepemilikan Penuh)</h3>
+                    <p class="text-center text-gray-400 mb-12 max-w-3xl mx-auto">Setiap sistem memiliki rentang investasi yang bervariasi tergantung pada kompleksitas dan fitur. Temukan solusi yang tepat untuk Anda.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="glass-card p-6 rounded-xl flex flex-col justify-between">
+                            <h4 class="text-xl font-bold text-white">Sistem Informasi HR (HRIS)</h4>
+                            <p class="text-gray-400 my-4">Rp <span class="text-3xl font-bold text-white">5-15</span> Juta</p>
+                            <div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-red-600 h-2 rounded-full" style="width: 50%"></div></div>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl flex flex-col justify-between">
+                            <h4 class="text-xl font-bold text-white">Customer Relationship Mng.</h4>
+                            <p class="text-gray-400 my-4">Rp <span class="text-3xl font-bold text-white">7-18</span> Juta</p>
+                            <div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-red-600 h-2 rounded-full" style="width: 60%"></div></div>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl flex flex-col justify-between">
+                            <h4 class="text-xl font-bold text-white">Warehouse Management Sys.</h4>
+                            <p class="text-gray-400 my-4">Rp <span class="text-3xl font-bold text-white">8-20</span> Juta</p>
+                            <div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-red-600 h-2 rounded-full" style="width: 70%"></div></div>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl flex flex-col justify-between">
+                            <h4 class="text-xl font-bold text-white">Hospital Management Sys.</h4>
+                            <p class="text-gray-400 my-4">Rp <span class="text-3xl font-bold text-white">10-20</span> Juta</p>
+                            <div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-red-600 h-2 rounded-full" style="width: 75%"></div></div>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl flex flex-col justify-between lg:col-span-2">
+                            <h4 class="text-xl font-bold text-white">Enterprise Resource Planning (ERP)</h4>
+                            <p class="text-gray-400 my-4">Mulai dari Rp <span class="text-3xl font-bold text-white">20</span> Juta*</p>
+                            <div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-red-600 h-2 rounded-full" style="width: 100%"></div></div>
+                            <p class="text-xs text-gray-500 mt-2">*Tergantung modul & kustomisasi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Opsi Sewa -->
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-bold text-white text-center mb-12">Paket Sewa Bulanan (Fleksibel & Terjangkau)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="glass-card p-8 rounded-xl flex flex-col">
+                            <h4 class="text-2xl font-bold text-white">Starter</h4>
+                            <p class="text-gray-400 mt-2 mb-6">Ideal untuk UKM & startup.</p>
+                            <div class="text-4xl font-black text-white mb-6">Rp 500rb<span class="text-lg font-semibold text-gray-300">/bulan</span></div>
+                            <ul class="space-y-3 text-gray-300 flex-grow mb-8">
+                                <li class="flex items-center"><svg class="w-5 h-5 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>1 Modul Sistem</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>15 Akun Pengguna</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Cloud Hosting</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Support Online</li>
+                            </ul>
+                            <a href="#kontak" class="w-full text-center mt-auto bg-gray-700 text-white font-semibold py-3 rounded-lg hover:bg-gray-600 transition-colors">Pilih Paket</a>
+                        </div>
+                        <div class="bg-red-700 p-8 rounded-xl flex flex-col ring-4 ring-red-500/50 transform md:scale-105">
+                             <div class="text-center mb-4"><span class="bg-red-900/50 text-white text-sm font-bold px-4 py-1 rounded-full">PALING POPULER</span></div>
+                            <h4 class="text-2xl font-bold text-white">Bisnis</h4>
+                            <p class="text-red-200 mt-2 mb-6">Untuk perusahaan berkembang.</p>
+                            <div class="text-4xl font-black text-white mb-6">Rp 1,5jt<span class="text-lg font-semibold text-red-100">/bulan</span></div>
+                            <ul class="space-y-3 text-red-100 flex-grow mb-8">
+                                <li class="flex items-center"><svg class="w-5 h-5 text-white mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>2-3 Modul Sistem</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-white mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>50 Akun Pengguna</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-white mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Laporan Analitik</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-white mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Support Prioritas</li>
+                            </ul>
+                            <a href="#kontak" class="w-full text-center mt-auto bg-white text-red-700 font-bold py-3 rounded-lg hover:bg-gray-200 transition-colors">Pilih Paket</a>
+                        </div>
+                        <div class="glass-card p-8 rounded-xl flex flex-col">
+                            <h4 class="text-2xl font-bold text-white">Enterprise</h4>
+                            <p class="text-gray-400 mt-2 mb-6">Solusi lengkap skala besar.</p>
+                            <div class="text-4xl font-black text-white mb-6">Rp 3jt<span class="text-lg font-semibold text-gray-300">/bulan</span></div>
+                            <ul class="space-y-3 text-gray-300 flex-grow mb-8">
+                                <li class="flex items-center"><svg class="w-5 h-5 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Semua Modul</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Pengguna Tak Terbatas</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Kustomisasi Minor</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Dedicated Support</li>
+                            </ul>
+                            <a href="#kontak" class="w-full text-center mt-auto bg-gray-700 text-white font-semibold py-3 rounded-lg hover:bg-gray-600 transition-colors">Pilih Paket</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mengapa Kami Section -->
+        <section id="mengapa-kami" class="py-20 fade-in-section">
+            <div class="container mx-auto max-w-7xl px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Partner Pertumbuhan Terpercaya Anda</h2>
+                    <p class="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">Kami lebih dari sekadar penyedia teknologi; kami adalah mitra strategis Anda.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div class="p-6">
+                        <div class="text-red-600 text-5xl mb-4">🎯</div>
+                        <h4 class="text-xl font-bold text-white mb-2">Solusi Tepat Guna</h4>
+                        <p class="text-gray-400">Sistem dirancang spesifik sesuai alur bisnis unik Anda untuk hasil maksimal.</p>
+                    </div>
+                     <div class="p-6">
+                        <div class="text-red-600 text-5xl mb-4">🎨</div>
+                        <h4 class="text-xl font-bold text-white mb-2">Antarmuka Modern</h4>
+                        <p class="text-gray-400">Desain yang bersih, intuitif, dan mudah digunakan oleh seluruh tim Anda.</p>
+                    </div>
+                     <div class="p-6">
+                        <div class="text-red-600 text-5xl mb-4">🚀</div>
+                        <h4 class="text-xl font-bold text-white mb-2">Skalabilitas Tinggi</h4>
+                        <p class="text-gray-400">Sistem kami dapat tumbuh dan berkembang seiring dengan kemajuan bisnis Anda.</p>
+                    </div>
+                     <div class="p-6">
+                        <div class="text-red-600 text-5xl mb-4">🤝</div>
+                        <h4 class="text-xl font-bold text-white mb-2">Dukungan Penuh</h4>
+                        <p class="text-gray-400">Kami menyediakan training dan support berkelanjutan untuk kelancaran operasi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontak Section (REVISED WITH SVG ICONS) -->
+        <section id="kontak" class="py-20 bg-gray-900 fade-in-section">
+            <div class="container mx-auto max-w-3xl px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold text-white">Siap Mengambil Langkah Berikutnya?</h2>
+                 <p class="text-lg text-gray-400 mt-4 mb-8">Hubungi kami untuk konsultasi gratis. Tim kami akan membantu menganalisis kebutuhan dan memberikan penawaran detail yang paling sesuai untuk kesuksesan bisnis Anda.</p>
+                 <div class="mt-10 flex justify-center items-center space-x-6">
+                    <!-- WhatsApp Icon -->
+                    <a href="https://wa.me/6282298546131" target="_blank" aria-label="Hubungi via WhatsApp" class="p-4 bg-gray-700 rounded-full text-white hover:bg-red-600 hover:scale-110 transition-all duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16.75 13.96c.25.13.4.26.46.33.13.13.19.33.19.52s-.06.39-.19.52c-.13.13-.32.26-.52.39-.46.26-1.1.52-1.87.26-.92-.32-1.75-.84-2.5-1.58s-1.26-1.58-1.58-2.5c-.26-.77.01-1.41.26-1.87.13-.19.26-.39.39-.52.13-.13.33-.19.52-.19s.39.06.52.19c.07.06.2.2.33.46.39.71.52,1.35.26,1.87-.13.19-.26.39-.39.52s-.19.19-.26.26c-.13.06-.26.13-.33.26-.06.13-.06.26,0,.39.19.71.64,1.35,1.16,1.87.52.52,1.16.97,1.87,1.16.13,0,.26.01.39,0,.13-.06.2-.13.26-.19.06-.07.13-.13.19-.26s.26-.26.52-.39c.52-.26,1.16-.13,1.87.26Z M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Z"/></svg>
+                    </a>
+                    <!-- Phone Icon -->
+                    <a href="tel:+6282298546131" aria-label="Telepon kami" class="p-4 bg-gray-700 rounded-full text-white hover:bg-red-600 hover:scale-110 transition-all duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m19.23 15.26-2.54-.29a1.99 1.99 0 0 0-1.64.57l-1.84 1.84a15.045 15.045 0 0 1-6.59-6.59l1.85-1.85c.46-.46.68-1.1.57-1.64l-.29-2.52a2.001 2.001 0 0 0-1.99-1.71H5.02c-1.13 0-2.07.94-2 2.04.17 2.89 1.05 5.61 2.41 7.98 1.58 2.73 3.85 5 6.59 6.59 2.37 1.37 5.09 2.24 7.98 2.41 1.1.08 2.04-.84 2.04-2v-1.73c.01-1.01-.7-1.86-1.71-1.99Z"/></svg>
+                    </a>
+                    <!-- Email Icon -->
+                    <a href="mailto:dojogrowth@gmail.com" aria-label="Kirim email" class="p-4 bg-gray-700 rounded-full text-white hover:bg-red-600 hover:scale-110 transition-all duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black py-8">
+        <div class="container mx-auto max-w-7xl px-6 text-center text-gray-500">
+            <p>&copy; 2025 Dojo Growth. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = mobileMenuButton.querySelector('.gg-menu');
+        const closeIcon = mobileMenuButton.querySelector('.gg-close');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+        
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+
+        // On-scroll fade-in animation
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
